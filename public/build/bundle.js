@@ -7721,7 +7721,7 @@ var app = (function () {
     }
 
     function instance$7($$self, $$props, $$invalidate) {
-    	var urlpath = window.location.href;
+    	let urlpath = window.location.href;
     	let open = false;
 
     	function toggle() {

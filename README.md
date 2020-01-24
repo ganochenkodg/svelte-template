@@ -28,3 +28,5 @@ npm run build
 ```
 
 Also it have Dockerfile for dockerize your app.
+
+![](https://github.com/ganochenkodg/svelte-template/blob/master/svelte.png)
