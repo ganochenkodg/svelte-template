@@ -14,17 +14,11 @@
 	import {
 		onMount
 	} from "svelte";
-
 	let open = false;
-
 	function toggle() {
 		open = !open;
 	};
 </script>
-
-<svelte:head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</svelte:head>
 
 <div>
 	<Button color="success" on:click={toggle}>Demo modal</Button>
@@ -32,7 +26,7 @@
 		<ModalHeader {toggle}>Demo modal</ModalHeader>
 		<ModalBody>
 		  <Label for="newTitle">Demo:</Label>
-		  <Input type="text"  placeholder="demo"/>
+		  <Input type="text" placeholder="demo"/>
 			<p></p>
 		</ModalBody>
 		<ModalFooter>
