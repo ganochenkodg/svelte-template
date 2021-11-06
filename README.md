@@ -29,4 +29,10 @@ npm run build
 
 Also it have Dockerfile for dockerize your app.
 
+
+```
+docker build -t svelte-template ./
+docker run -p 80:8080 svelte-template
+```
+
 ![](https://github.com/ganochenkodg/svelte-template/blob/master/svelte.png)

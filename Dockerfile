@@ -1,12 +1,12 @@
-FROM node:12-slim as build
+FROM node:14-alpine as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY ./package*.json /app/
-RUN npm install --silent
+RUN npm ci
 COPY . /app
 RUN npm run build
 
-FROM nginx:1.16.0-alpine
+FROM nginxinc/nginx-unprivileged:1.20
 COPY --from=build /app/public /usr/share/nginx/html
-EXPOSE 80
+EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
